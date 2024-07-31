@@ -4,7 +4,6 @@ import { StyleSheet, Dimensions, Image, PermissionsAndroid, Platform, Alert, Tou
 import { IconButton, MD3Colors, Button } from 'react-native-paper'
 import ImagePicker from 'react-native-image-crop-picker';
 import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
-import DatePicker from 'react-native-date-picker'
 
 // const windowWidth = Dimensions.get('window').width;
 // const windowHeight = Dimensions.get('window').height;
