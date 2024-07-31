@@ -11,7 +11,7 @@ export default function Login({ navigation }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    loginUser = () => {
+    const loginUser = () => {
         fetch(`http://192.168.1.100:8000/users/login/${username}/${password}`, {
             method: "GET",
             headers: {
@@ -35,7 +35,7 @@ export default function Login({ navigation }) {
             .catch((err) => console.log(err));
     }
 
-    clearTextFields = () => {
+    const clearTextFields = () => {
         setUsername("");
         setPassword("");
     }

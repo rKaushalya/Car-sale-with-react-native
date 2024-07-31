@@ -13,7 +13,7 @@ export default function Signup({ navigation }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    saveUser = async () => {
+    const saveUser = async () => {
 
         if (fullName != "" && contact != "" && username != "" && password != "") {
             fetch('http://192.168.1.100:8000/users', {

@@ -23,7 +23,7 @@ export default function LoadCars({ route, navigation }) {
             });
     });
 
-    componentDidMount = () => {
+    const componentDidMount = () => {
         const focusHandler = route.navigation.addListener('focus', () => {
             fetch(`http://192.168.1.100:8000/cars/loadCars/${username}`, {
                 method: "GET",

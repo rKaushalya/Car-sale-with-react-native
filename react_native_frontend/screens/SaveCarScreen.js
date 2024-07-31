@@ -95,7 +95,7 @@ export default function SaveCarScreen({ route, navigation }) {
         return data;
     };
 
-    saveCar = async () => {
+    const saveCar = async () => {
         if (photo != "" && date != "" && location != "" && description != "") {
             fetch('http://192.168.1.100:8000/cars/save', {
                 method: 'POST',
