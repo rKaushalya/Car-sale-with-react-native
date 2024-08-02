@@ -32,7 +32,7 @@ const Account = ({route,navigation} ) => {
             <Avatar bg="indigo.50" mt={'25%'} alignSelf="center" size="2xl" source={require('../assets/account.png')}></Avatar>
             <Text style={styles.username}>ravi</Text>
             <TextInput label={'Full Name'} mode={'flat'} editable={false} value="ravi" style={styles.fullNameTextField} />
-            <Button icon="logout" mode="contained" style={styles.logOutBtn} onPress={()=>{route.navigation.navigate("Login")}}>
+            <Button icon="logout" mode="contained" style={styles.logOutBtn} onPress={()=>{navigation.navigate("Login")}}>
                 LOG OUT
             </Button>
         </NativeBaseProvider>

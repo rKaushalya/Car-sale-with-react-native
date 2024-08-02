@@ -22,7 +22,7 @@ connection.connect(function (err) {
 
 const storage = multer.diskStorage({
     destination(req, file, callback) {
-        callback(null, 'D:/projects/React-Navive/Car-sale-with-react-native/react_native_frontend/assets/uploads');
+        callback(null, 'D:/projects/React-Navive/Car-sale-with-react-native/react_native_frontend/assets/uploads/');
     },
     filename(req, file, callback) {
         callback(null, `${file.originalname}`);

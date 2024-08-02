@@ -2,8 +2,19 @@ import { StyleSheet, Text, TouchableOpacity, View, FlatList, Dimensions, Alert }
 import React, { useEffect, useState } from 'react';
 import { IconButton, MD3Colors } from 'react-native-paper';
 import { HStack, NativeBaseProvider } from 'native-base';
+import { Image } from 'react-native';
+
+import car1 from '../assets/uploads/car1.jpeg'
+import FB_IMG_1717938177895 from '../assets/uploads/FB_IMG_1717938177895.jpg'
+import IMG_20230903_111118 from '../assets/uploads/IMG_20230903_111118.jpg'
 
 const windowWidth = Dimensions.get('window').width;
+
+const images = {
+    'car1.jpeg': car1,
+    'FB_IMG_1717938177895.jpg': FB_IMG_1717938177895,
+    'IMG_20230903_111118.jpg': IMG_20230903_111118,
+};
 
 function LoadCars({ route, navigation }) {
     const [DATA, setDATA] = useState([]);
@@ -52,10 +63,14 @@ function LoadCars({ route, navigation }) {
             });
     };
 
+    const getImageSource = (imageName) => {
+        return images[imageName] || require('../assets/uploads/car1.jpeg');
+    };
+
     const renderItem = ({ item }) => (
         <View style={styles.itemContainer}>
-            {/* Uncomment and fix the image URL if needed */}
-            {/* <Image source={{ uri: `http://192.168.110.122:8000/${item.image}` }} style={styles.img} alt='Car Image' />*/}
+             {/*Uncomment and fix the image URL if needed */}
+            <Image source={getImageSource(item.image)} style={styles.img} />
             <Text style={styles.description}>{item.description}</Text>
             <Text style={styles.location}>Location: {item.location}</Text>
             <Text style={styles.date}>Date: {item.date}</Text>
