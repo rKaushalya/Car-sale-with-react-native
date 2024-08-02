@@ -55,7 +55,7 @@ function LoadCars({ route, navigation }) {
     const renderItem = ({ item }) => (
         <View style={styles.itemContainer}>
             {/* Uncomment and fix the image URL if needed */}
-            {/* <Image source={{ uri: `http://192.168.110.122:8000/${item.image}` }} style={styles.img} alt='Car Image' /> */}
+            {/* <Image source={{ uri: `http://192.168.110.122:8000/${item.image}` }} style={styles.img} alt='Car Image' />*/}
             <Text style={styles.description}>{item.description}</Text>
             <Text style={styles.location}>Location: {item.location}</Text>
             <Text style={styles.date}>Date: {item.date}</Text>
