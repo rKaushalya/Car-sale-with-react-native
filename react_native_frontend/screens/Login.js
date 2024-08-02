@@ -12,7 +12,7 @@ export default function Login({ navigation }) {
     const [password, setPassword] = useState("");
 
     const loginUser = () => {
-        fetch(`http://192.168.1.100:8000/users/login/${username}/${password}`, {
+        fetch(`http://localhost:8000/users/login/${username}/${password}`, {
             method: "GET",
             headers: {
                 'content-type': 'application/json'
