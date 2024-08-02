@@ -10,6 +10,7 @@ import BottomNavigationScreen from './components/BottomNavigationScreen'
 import UpdateCar from './screens/UpdateCar'
 
 import { LogBox } from 'react-native';
+import Account from "./screens/Account";
 
 
 // Ignore log notification by message

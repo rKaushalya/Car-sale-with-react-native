@@ -6,10 +6,54 @@ import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
 
 const windowWidth = Dimensions.get('window').width;
 
-export default function SaveCarScreen({ route, navigation }) {
+const styles = StyleSheet.create({
+    saveCarHeading: {
+        color: 'blue',
+        textDecorationLine: 'underline',
+        fontWeight: '800',
+        alignSelf: 'center',
+        marginTop: '5%'
+    },
+    uploadBtnLabel: {
+        color: '#04044a',
+        fontSize: 13,
+        fontWeight: 'bold',
+        letterSpacing: 2,
+        fontFamily: 'arial'
+    },
+    uploadImageBtn: {
+        width: '60%',
+        alignSelf: 'center',
+        marginTop: '2.5%',
+        borderColor: '#04044a',
+        borderWidth: 1,
+        borderRadius: 100
+    },
+    uploadImageContainer: {
+        borderColor: 'black',
+        borderWidth: 1,
+        width: '80%',
+        height: '30%',
+        marginTop: '2.5%',
+        alignSelf: 'center',
+        resizeMode: 'cover'
+    },
+    captureBtn: {
+        marginTop: '4%'
+    },
+    input: {
+        fontSize: 20
+    },
+    textArea: {
+        fontSize: 15
+    }
+});
+
+
+function SaveCarScreen({ route, navigation }) {
 
     const [photo, setPhoto] = useState("");
-    const [username, setUsername] = useState(route.props.username);
+    const [username, setUsername] = useState("ravi");
     const [date, setDate] = useState("");
     const [location, setLocation] = useState("");
     const [description, setDescription] = useState("");
@@ -159,45 +203,4 @@ export default function SaveCarScreen({ route, navigation }) {
     );
 }
 
-const styles = StyleSheet.create({
-    saveCarHeading: {
-        color: 'blue',
-        textDecorationLine: 'underline',
-        fontWeight: '800',
-        alignSelf: 'center',
-        marginTop: '5%'
-    },
-    uploadBtnLabel: {
-        color: '#04044a',
-        fontSize: 13,
-        fontWeight: 'bold',
-        letterSpacing: 2,
-        fontFamily: 'arial'
-    },
-    uploadImageBtn: {
-        width: '60%',
-        alignSelf: 'center',
-        marginTop: '2.5%',
-        borderColor: '#04044a',
-        borderWidth: 1,
-        borderRadius: 100
-    },
-    uploadImageContainer: {
-        borderColor: 'black',
-        borderWidth: 1,
-        width: '80%',
-        height: '30%',
-        marginTop: '2.5%',
-        alignSelf: 'center',
-        resizeMode: 'cover'
-    },
-    captureBtn: {
-        marginTop: '4%'
-    },
-    input: {
-        fontSize: 20
-    },
-    textArea: {
-        fontSize: 15
-    }
-});
+export default  SaveCarScreen;

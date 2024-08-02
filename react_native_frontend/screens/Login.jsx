@@ -6,7 +6,7 @@ import { NativeBaseProvider, Box, Input, FormControl,HStack, Stack, Button } fro
 // const windowHeight = Dimensions.get('window').height;
 const image = require('../assets/login_background.jpg')
 
-export default function Login({ navigation }) {
+const Login = ({ navigation }) => {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -113,3 +113,5 @@ const styles = StyleSheet.create({
         fontSize: 17
     }
 })
+
+export default Login;

@@ -4,9 +4,9 @@ import { NativeBaseProvider, Text, FormControl, Stack, Input, Button, TextArea }
 
 export default function UpdateCar({ route, navigation }) {
 
-    const [date, setDate] = useState(route.params.item.date);
-    const [location, setLocation] = useState(route.params.item.location);
-    const [description, setDescription] = useState(route.params.item.description);
+    const [date, setDate] = useState("2024-10-20");
+    const [location, setLocation] = useState("galle");
+    const [description, setDescription] = useState("repair");
 
     const tempData = {
         date: date,

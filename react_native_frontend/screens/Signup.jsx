@@ -6,7 +6,7 @@ import { NativeBaseProvider, Box, Input, FormControl, Stack, Button, Heading, Wa
 // const windowHeight = Dimensions.get('window').height;
 const image = require('../assets/login_background.jpg')
 
-export default function Signup({ navigation }) {
+const Signup = ({ navigation }) => {
 
     const [fullName, setFullName] = useState("");
     const [contact, setContact] = useState("");
@@ -143,3 +143,5 @@ const styles = StyleSheet.create({
         textDecorationLine: 'underline'
     }
 })
+
+export default Signup;

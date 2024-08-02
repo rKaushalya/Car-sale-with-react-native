@@ -3,20 +3,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NativeBaseProvider, Avatar } from 'native-base';
 import { TextInput, Button } from 'react-native-paper';
 
-export default function Account({route,navigation}) {
-
-    return (
-        <NativeBaseProvider>
-            <Avatar bg="indigo.50" mt={'25%'} alignSelf="center" size="2xl" source={require('../assets/account.png')}></Avatar>
-            <Text style={styles.username}>{route.props.username}</Text>
-            <TextInput label={'Full Name'} mode={'flat'} editable={false} value={route.props.fullName} style={styles.fullNameTextField} />
-            <Button icon="logout" mode="contained" style={styles.logOutBtn} onPress={()=>{route.navigation.navigate("Login")}}>
-                LOG OUT
-            </Button>
-        </NativeBaseProvider>
-    )
-}
-
 const styles = StyleSheet.create({
     username: {
         alignSelf: 'center',
@@ -39,3 +25,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#0984e3'
     }
 });
+const Account = ({route,navigation} ) => {
+
+    return (
+        <NativeBaseProvider>
+            <Avatar bg="indigo.50" mt={'25%'} alignSelf="center" size="2xl" source={require('../assets/account.png')}></Avatar>
+            <Text style={styles.username}>ravi</Text>
+            <TextInput label={'Full Name'} mode={'flat'} editable={false} value="ravi" style={styles.fullNameTextField} />
+            <Button icon="logout" mode="contained" style={styles.logOutBtn} onPress={()=>{route.navigation.navigate("Login")}}>
+                LOG OUT
+            </Button>
+        </NativeBaseProvider>
+    )
+}
+
+export default Account;
