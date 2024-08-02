@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React, { useEffect } from 'react'
-import { NativeBaseProvider, Avatar } from 'native-base'
-import { TextInput,Button } from 'react-native-paper'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { NativeBaseProvider, Avatar } from 'native-base';
+import { TextInput, Button } from 'react-native-paper';
 
 export default function Account({route,navigation}) {
 
@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
         width: '85%',
         alignSelf: 'center'
     },
-    logOutBtn:{
-        marginTop:'15%',
-        width:'85%',
-        alignSelf:'center',
+    logOutBtn: {
+        marginTop: '15%',
+        width: '85%',
+        alignSelf: 'center',
         backgroundColor: '#0984e3'
     }
-})
+});

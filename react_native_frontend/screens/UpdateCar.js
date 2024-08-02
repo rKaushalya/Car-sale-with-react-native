@@ -23,7 +23,7 @@ export default function UpdateCar({ route, navigation }) {
     const updateCar = () => {
 
         if (date != "" && location != "" && description != "") {
-            fetch('http://192.168.1.100:8000/cars/update', {
+            fetch('http://192.168.110.122:8000/cars/update', {
                 method: 'PUT',
                 body: JSON.stringify({
                     carId: route.params.item.carId,

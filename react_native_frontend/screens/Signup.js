@@ -16,7 +16,7 @@ export default function Signup({ navigation }) {
     const saveUser = async () => {
 
         if (fullName != "" && contact != "" && username != "" && password != "") {
-            fetch('http://localhost:8000/users', {
+            fetch('http://192.168.110.122:8000/users', {
                 method: 'POST',
                 body: JSON.stringify({
                     fullName: fullName,

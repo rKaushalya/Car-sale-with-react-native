@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Dimensions, ImageBackground, Image, Alert } from 'react-native'
-import React, { useState } from 'react'
+import React,  { useState } from 'react'
 import { NativeBaseProvider, Box, Input, FormControl,HStack, Stack, Button } from 'native-base'
 
 // const windowWidth = Dimensions.get('window').width;
@@ -12,7 +12,7 @@ export default function Login({ navigation }) {
     const [password, setPassword] = useState("");
 
     const loginUser = () => {
-        fetch(`http://localhost:8000/users/login/${username}/${password}`, {
+        fetch(`http://192.168.110.122:8000/users/login/${username}/${password}`, {
             method: "GET",
             headers: {
                 'content-type': 'application/json'
